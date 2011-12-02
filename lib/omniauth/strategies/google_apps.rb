@@ -3,7 +3,7 @@
 module OmniAuth
   module Strategies
     class GoogleApps < OmniAuth::Strategies::OpenID
-      args [ :store ]
+      args [ :store, :domain ]
 
       def get_identifier
         OmniAuth::Form.build(:title => 'Google Apps Authentication') do
